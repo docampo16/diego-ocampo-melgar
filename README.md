@@ -1,6 +1,6 @@
 # Diego Ocampo Melgar | professional research site
 
-Static bilingual professional site designed for GitHub Pages.
+Static bilingual professional site for GitHub Pages, configured for `https://diegoocampo.earth/`.
 
 ## Structure
 
@@ -8,22 +8,32 @@ Static bilingual professional site designed for GitHub Pages.
 - `en/index.html`: English version
 - `assets/css/main.css`: layout and visual system
 - `assets/js/main.js`: reveal animation and footer year
+- `CNAME`: GitHub Pages custom domain
+- `robots.txt`: crawler instructions
+- `sitemap.xml`: Spanish and English URLs with language alternates
+- `.nojekyll`: serve the static files directly
 
-## Deploy with GitHub Pages
+## SEO configuration
 
-1. Create a repository named `YOUR-USERNAME.github.io`.
-2. Copy the contents of this folder to the repository root.
-3. Commit and push to the `main` branch.
-4. In GitHub, open **Settings > Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select `main` and `/(root)`.
-7. Save. The site will be available at `https://YOUR-USERNAME.github.io/`.
+Both language versions include:
 
-Spanish is the default site. English is available under `/en/` and through the language selector.
+- unique page titles and descriptions
+- canonical URLs on `diegoocampo.earth`
+- reciprocal `hreflang` tags for Spanish and English
+- `x-default` pointing to the Spanish homepage
+- Open Graph and Twitter sharing metadata
+- Schema.org `Person` structured data linked to ORCID, LinkedIn, ResearchGate and GitHub
+- Schema.org `WebSite` structured data
+
+## Deploy/update with GitHub Pages
+
+Copy the contents of this folder to the root of the existing GitHub Pages repository and commit/push to `main`. Keep the `CNAME` file in the repository.
+
+After deployment, submit `https://diegoocampo.earth/sitemap.xml` in Google Search Console and request indexing for both the Spanish homepage and `/en/`.
 
 ## Images
 
-The current version references remote Copernicus imagery for the large visual sections. For long-term production use, replace those URLs in `assets/css/main.css` with your own optimized imagery and store the files locally under `assets/images/`.
+The current version references remote Copernicus imagery for the large visual sections and social sharing image. For long-term production use, replace these with optimized local images under `assets/images/` and update the corresponding CSS and Open Graph URLs.
 
 ## Design attribution
 
